@@ -1,0 +1,13 @@
+# folders
+.idea/
+.vscode/
+bin/
+
+# files
+.env
+config.json
+config.yaml
+config.yml
+
+# docker
+Dockerfile
