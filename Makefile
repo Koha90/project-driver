@@ -1,8 +1,8 @@
 build:
-	@go build -o bin/
+	@go build -o bin/ ./cmd/main.go
 
 run: build
-	@./bin/project-driver
+	@./bin/main
 
 test:
 	test -v ./...

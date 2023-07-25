@@ -2,12 +2,14 @@
 .idea/
 .vscode/
 bin/
+bin/*
 
 # files
 .env
 config.json
 config.yaml
 config.yml
+*.log
 
 # docker
 Dockerfile
