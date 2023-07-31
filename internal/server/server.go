@@ -30,8 +30,13 @@ func (s *APIServer) Run() {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
-	r.HandleFunc("/user", makeHTTPHandleFunc(s.handleUser))
-	r.Delete("/user/{id}", makeHTTPHandleFunc(s.handleDeleteUser))
+	r.HandleFunc("/", nil)
+
+	apiR := chi.NewRouter()
+	apiR.HandleFunc("/user", makeHTTPHandleFunc(s.handleUser))
+	apiR.Delete("/user/{id}", makeHTTPHandleFunc(s.handleDeleteUser))
+
+	r.Mount("/api", apiR)
 
 	http.ListenAndServe(s.addr, r)
 }

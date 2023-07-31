@@ -13,8 +13,9 @@
 1. /api/user/{id} -- Update - Response "204 no content" - update user by ID
 
 ### Business logic:
-1. Create authorization.
+1. Create authorization & authentication.
 2. Check and validate password.
 3. Create table "routes for drivers."
 4. Relation table routes and drivers with time start, time finish and photo.
 5. Create clients for telegram and google spreadsheets.
+6. Warp all routes on Chi.
